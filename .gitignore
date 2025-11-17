@@ -1,2 +1,19 @@
 frames
 venv
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# OS files
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
