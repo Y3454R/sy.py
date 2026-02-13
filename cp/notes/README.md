@@ -173,13 +173,90 @@ for x in a:
 
 ---
 
-## 6️⃣ Key DSA Takeaways
+## 6️⃣ `list.index()`
 
-- Understand iterators vs lists (`map`, generators)
-- Know difference between in-place vs returned copy
-- Slicing creates a copy
-- Two-pointer techniques are essential
-- Prefer O(1) space when possible in interviews
+### ✅ Basic Usage
+
+```python
+a = [10, 20, 30, 20]
+pos = a.index(20)
+print(pos)
+```
+
+Output:
+
+```
+1
+```
+
+- Returns the **first occurrence** of the value
+- Time complexity: O(n)
+
+---
+
+### ⚠ Common Mistakes
+
+#### ❌ Expecting all positions
+
+```python
+a.index(20)  # returns only first occurrence
+```
+
+If you need all indices:
+
+```python
+[i for i, v in enumerate(a) if v == 20]
+```
+
+---
+
+#### ❌ Value not present
+
+```python
+a.index(100)
+```
+
+Raises:
+
+```
+ValueError
+```
+
+### ✅ Safe Way
+
+```python
+if 100 in a:
+    pos = a.index(100)
+```
+
+---
+
+### ✅ Using Start and End Range
+
+```python
+a.index(value, start, end)
+```
+
+Example:
+
+```python
+a = [1, 2, 3, 2, 4]
+a.index(2, 2)  # searches from index 2 onward
+```
+
+---
+
+### 🧠 DSA Insight
+
+- `list.index()` is O(n)
+- Avoid using it inside loops (can become O(n²))
+- Prefer dictionary or hashmap for frequent lookups
+
+Example optimization:
+
+```python
+index_map = {v: i for i, v in enumerate(a)}
+```
 
 ---
 
@@ -190,6 +267,7 @@ for x in a:
 - `sorted()` → returns new list
 - `[::-1]` → reverse copy
 - `a[l:r]` → always creates a new list
+- `list.index()` → O(n) linear search
 
 ---
 
