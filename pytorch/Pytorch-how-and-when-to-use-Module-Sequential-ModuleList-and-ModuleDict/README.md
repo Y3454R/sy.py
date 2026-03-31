@@ -273,7 +273,7 @@ print(model)
     )
 
 
-`self.encoder` now holds booth `conv_block`. We have decoupled logic for our model and make it easier to read and reuse. Our `conv_block` function can be imported and used in another model.
+`self.encoder` now holds both `conv_block`. We have decoupled logic for our model and make it easier to read and reuse. Our `conv_block` function can be imported and used in another model.
 
 ## Dynamic Sequential: create multiple layers at once
 
