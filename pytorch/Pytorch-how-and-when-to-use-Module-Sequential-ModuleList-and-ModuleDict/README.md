@@ -1,4 +1,4 @@
-
+<!-- https://github.com/Y3454R/sy.py/tree/main/pytorch/Pytorch-how-and-when-to-use-Module-Sequential-ModuleList-and-ModuleDict -->
 # Pytorch: how and when to use Module, Sequential, ModuleList and ModuleDict
 ### Effective way to share, reuse and break down the complexity of your models
 
