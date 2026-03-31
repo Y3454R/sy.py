@@ -348,7 +348,7 @@ print(model)
     )
 
 
-Let's break it down. We created an array `self.enc_sizes` that holds the sizes of our encoder. Then we create an array `conv_blocks` by iterating the sizes. Since we have to give both a input size and an output size for each layer we `zip`ped the size array with itself by shifting it by one. 
+Let's break it down. We created an array `self.enc_sizes` that holds the sizes of our encoder. Then we create an array `conv_blocks` by iterating the sizes. Since we have to give both an input size and an output size for each layer we `zip`ped the size array with itself by shifting it by one. 
 
 Just to be clear, take a look at the following example:
 
